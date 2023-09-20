@@ -22,9 +22,10 @@ public:
 
     ListNode* deleteMiddle(ListNode* head) {
         if(head == NULL) return NULL;
-        int target = size(head)/2, i = 1;
 
         if(size(head) == 1) return NULL;
+        
+        int target = size(head)/2, i = 1;
 
         ListNode* curr = head;
         // We need to delete the next node of the target
