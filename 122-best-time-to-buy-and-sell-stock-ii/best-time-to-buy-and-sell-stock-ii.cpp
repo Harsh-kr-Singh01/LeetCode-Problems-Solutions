@@ -8,13 +8,6 @@ public:
                 ans += prices[i+1] - prices[i];
             }
         }
-        // while(l < n && r < n){
-        //     if(prices[l] < prices[r]){
-        //         ans = max(ans, prices[r] - prices[l]);
-        //         r++;
-        //     }
-        //     else l = r, r++;   
-        // }
         return ans;
     }
 };
