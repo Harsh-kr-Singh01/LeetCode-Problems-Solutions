@@ -17,7 +17,7 @@ public:
         // 0 4 2 3 0 2 --> Freq array
         int ans = 0;
         for(int i = 0; i < freq.size(); i++){
-            ans += freq[i] * (freq[i] - 1) / 2;
+            if(freq[i] != 0) ans += freq[i] * (freq[i] - 1) / 2;
         }
         return ans;
     }
