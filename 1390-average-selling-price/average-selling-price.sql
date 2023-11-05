@@ -1,6 +1,7 @@
-# Write your MySQL query statement below
-SELECT t.product_id, CASE WHEN round(sum(price*units)/sum(units), 2) IS NULL THEN 0 ELSE round(sum(price*units)/sum(units), 2) END as average_price
-from(
+
+SELECT 
+t.product_id, CASE WHEN round(sum(price*units)/sum(units), 2) IS NULL THEN 0 ELSE round(sum(price*units)/sum(units), 2) END as average_price
+FROM(
 SELECT a.product_id,a.price,b.units
 FROM Prices AS A
 LEFT JOIN UnitsSold AS B
